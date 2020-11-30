@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">CS489GroupProj</string>
+
+    <string name="banner">PRACTICE YOUR SPELLING!</string>
+    <string name="rules_banner">RULES:</string>
+    <string name="step1">1. Choose your difficulty</string>
+    <string name="step2">2. Press sound icon to hear word</string>
+    <string name="step3">3. Type your spelling in the space</string>
+    <string name="step4">4. Repeat steps 2/3 for each word</string>
+    <string name="choose_difficulty_banner">CHOOSE DIFFICULTY:</string>
+    <string name="best_score">Best Score:</string>
+    <string name="init_score">0/15</string>
+
+    <string name="banner2">SPELL THOSE WORDS!</string>
+    <string name="all_done_spelling">ALL DONE!</string>
 </resources>

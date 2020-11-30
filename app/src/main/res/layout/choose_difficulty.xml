@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/BannerBox"
+        android:layout_width="match_parent"
+        android:id="@+id/banner"
+        android:text="@string/banner"
+        android:background="@color/blue"/>
+
+    <TextView
+        style="@style/BannerBox"
+        android:layout_width="wrap_content"
+        android:id="@+id/rules_banner"
+        android:text="@string/rules_banner"
+        android:layout_below="@id/banner"/>
+
+    <TextView
+        style="@style/RuleStep"
+        android:id="@+id/step1"
+        android:layout_below="@id/rules_banner"
+        android:text="@string/step1" />
+
+    <TextView
+        style="@style/RuleStep"
+        android:id="@+id/step2"
+        android:layout_below="@id/step1"
+        android:text="@string/step2" />
+
+    <TextView
+        style="@style/RuleStep"
+        android:id="@+id/step3"
+        android:layout_below="@id/step2"
+        android:text="@string/step3" />
+
+    <TextView
+        style="@style/RuleStep"
+        android:id="@+id/step4"
+        android:layout_below="@id/step3"
+        android:text="@string/step4" />
+
+    <TextView
+        style="@style/BannerBox"
+        android:layout_width="wrap_content"
+        android:id="@+id/choose_diff_banner"
+        android:text="@string/choose_difficulty_banner"
+        android:layout_below="@id/step4"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        style="@style/DifficultyButton"
+        android:id="@+id/easy"
+        android:layout_below="@id/choose_diff_banner"
+        android:text="EASY"
+        android:onClick="playEasy"/>
+
+    <Button
+        style="@style/DifficultyButton"
+        android:id="@+id/medium"
+        android:layout_below="@id/best_score_easy"
+        android:text="MEDIUM"
+        android:onClick="playMedium"/>
+
+    <Button
+        style="@style/DifficultyButton"
+        android:id="@+id/hard"
+        android:layout_below="@id/best_score_medium"
+        android:text="HARD"
+        android:onClick="playHard"/>
+
+    <TextView
+        style="@style/BestScoreBox"
+        android:id="@+id/best_score_easy"
+        android:layout_below="@id/easy"
+        android:layout_alignLeft="@id/easy"
+        android:layout_alignStart="@id/easy"
+        android:text="@string/best_score" />
+
+    <TextView
+        style="@style/BestScoreBox"
+        android:id="@+id/best_score_medium"
+        android:layout_below="@id/medium"
+        android:layout_alignLeft="@id/medium"
+        android:layout_alignStart="@id/medium"
+        android:text="@string/best_score" />
+
+    <TextView
+        style="@style/BestScoreBox"
+        android:id="@+id/best_score_hard"
+        android:layout_below="@id/hard"
+        android:layout_alignLeft="@id/hard"
+        android:layout_alignStart="@id/hard"
+        android:text="@string/best_score" />
+
+    <TextView
+        style="@style/BestScoreBox"
+        android:id="@+id/easy_score"
+        android:layout_below="@id/easy"
+        android:layout_toRightOf="@id/best_score_easy"
+        android:layout_toEndOf="@id/best_score_easy"
+        android:text="@string/init_score"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp" />
+
+    <TextView
+        style="@style/BestScoreBox"
+        android:id="@+id/medium_score"
+        android:layout_below="@id/medium"
+        android:layout_toRightOf="@id/best_score_medium"
+        android:layout_toEndOf="@id/best_score_medium"
+        android:text="@string/init_score"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp" />
+
+    <TextView
+        style="@style/BestScoreBox"
+        android:id="@+id/hard_score"
+        android:layout_below="@id/hard"
+        android:layout_toRightOf="@id/best_score_hard"
+        android:layout_toEndOf="@id/best_score_hard"
+        android:text="@string/init_score"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp" />
+
+</RelativeLayout>

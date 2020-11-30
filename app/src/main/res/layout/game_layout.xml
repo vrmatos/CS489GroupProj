@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/BannerBox"
+            android:layout_width="match_parent"
+            android:id="@+id/banner2"
+            android:text="@string/banner2"
+            android:background="@color/blue"/>
+
+        <!-- ONE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <Button
+            style="@style/SpeechButton"
+            android:id="@+id/megaphone1"
+            android:layout_alignBottom="@id/num1"
+            android:layout_below="@id/banner2"
+            android:background="@drawable/megaphone"
+            android:onClick="play1"/>
+        <TextView
+            style="@style/WordNumber"
+            android:id="@+id/num1"
+            android:layout_below="@id/banner2"
+            android:layout_toRightOf="@id/megaphone1"
+            android:layout_toEndOf="@id/megaphone1"
+            android:text="1."/>
+        <EditText
+            style="@style/WordInput"
+            android:id="@+id/word1"
+            android:layout_toRightOf="@id/num1"
+            android:layout_toEndOf="@id/num1"
+            android:layout_below="@id/banner2" />
+
+        <!-- TWO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <Button
+            style="@style/SpeechButton"
+            android:id="@+id/megaphone2"
+            android:layout_alignBottom="@id/num2"
+            android:layout_below="@id/word1"
+            android:background="@drawable/megaphone"
+            android:onClick="play2"/>
+        <TextView
+            style="@style/WordNumber"
+            android:id="@+id/num2"
+            android:layout_below="@id/word1"
+            android:layout_toRightOf="@id/megaphone1"
+            android:layout_toEndOf="@id/megaphone1"
+            android:text="2."/>
+        <EditText
+            style="@style/WordInput"
+            android:id="@+id/word2"
+            android:layout_toRightOf="@id/num2"
+            android:layout_toEndOf="@id/num2"
+            android:layout_below="@id/word1" />
+
+        <!-- THREE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <Button
+            style="@style/SpeechButton"
+            android:id="@+id/megaphone3"
+            android:layout_alignBottom="@id/num3"
+            android:layout_below="@id/word2"
+            android:background="@drawable/megaphone"
+            android:onClick="play3"/>
+        <TextView
+            style="@style/WordNumber"
+            android:id="@+id/num3"
+            android:layout_below="@id/word2"
+            android:layout_toRightOf="@id/megaphone2"
+            android:layout_toEndOf="@id/megaphone2"
+            android:text="3."/>
+        <EditText
+            style="@style/WordInput"
+            android:id="@+id/word3"
+            android:layout_toRightOf="@id/num3"
+            android:layout_toEndOf="@id/num3"
+            android:layout_below="@id/word2" />
+
+        <!-- FOUR ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <Button
+            style="@style/SpeechButton"
+            android:id="@+id/megaphone4"
+            android:layout_alignBottom="@id/num4"
+            android:layout_below="@id/word3"
+            android:background="@drawable/megaphone"
+            android:onClick="play4"/>
+        <TextView
+            style="@style/WordNumber"
+            android:id="@+id/num4"
+            android:layout_below="@id/word3"
+            android:layout_toRightOf="@id/megaphone3"
+            android:layout_toEndOf="@id/megaphone3"
+            android:text="4."/>
+        <EditText
+            style="@style/WordInput"
+            android:id="@+id/word4"
+            android:layout_toRightOf="@id/num4"
+            android:layout_toEndOf="@id/num4"
+            android:layout_below="@id/word3" />
+
+        <!-- FIVE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <Button
+            style="@style/SpeechButton"
+            android:id="@+id/megaphone5"
+            android:layout_alignBottom="@id/num5"
+            android:layout_below="@id/word4"
+            android:background="@drawable/megaphone"
+            android:onClick="play5"/>
+        <TextView
+            style="@style/WordNumber"
+            android:id="@+id/num5"
+            android:layout_below="@id/word4"
+            android:layout_toRightOf="@id/megaphone4"
+            android:layout_toEndOf="@id/megaphone4"
+            android:text="5."/>
+        <EditText
+            style="@style/WordInput"
+            android:id="@+id/word5"
+            android:layout_toRightOf="@id/num5"
+            android:layout_toEndOf="@id/num5"
+            android:layout_below="@id/word4" />
+
+        <!-- SIX ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <Button
+            style="@style/SpeechButton"
+            android:id="@+id/megaphone6"
+            android:layout_alignBottom="@id/num6"
+            android:layout_below="@id/word5"
+            android:background="@drawable/megaphone"
+            android:onClick="play6"/>
+        <TextView
+            style="@style/WordNumber"
+            android:id="@+id/num6"
+            android:layout_below="@id/word5"
+            android:layout_toRightOf="@id/megaphone5"
+            android:layout_toEndOf="@id/megaphone5"
+            android:text="6."/>
+        <EditText
+            style="@style/WordInput"
+            android:id="@+id/word6"
+            android:layout_toRightOf="@id/num6"
+            android:layout_toEndOf="@id/num6"
+            android:layout_below="@id/word5" />
+
+        <!-- SEVEN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <Button
+            style="@style/SpeechButton"
+            android:id="@+id/megaphone7"
+            android:layout_alignBottom="@id/num7"
+            android:layout_below="@id/word6"
+            android:background="@drawable/megaphone"
+            android:onClick="play7"/>
+        <TextView
+            style="@style/WordNumber"
+            android:id="@+id/num7"
+            android:layout_below="@id/word6"
+            android:layout_toRightOf="@id/megaphone6"
+            android:layout_toEndOf="@id/megaphone6"
+            android:text="7."/>
+        <EditText
+            style="@style/WordInput"
+            android:id="@+id/word7"
+            android:layout_toRightOf="@id/num7"
+            android:layout_toEndOf="@id/num7"
+            android:layout_below="@id/word6" />
+
+        <!-- EIGHT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <Button
+            style="@style/SpeechButton"
+            android:id="@+id/megaphone8"
+            android:layout_alignBottom="@id/num8"
+            android:layout_below="@id/word7"
+            android:background="@drawable/megaphone"
+            android:onClick="play8"/>
+        <TextView
+            style="@style/WordNumber"
+            android:id="@+id/num8"
+            android:layout_below="@id/word7"
+            android:layout_toRightOf="@id/megaphone7"
+            android:layout_toEndOf="@id/megaphone7"
+            android:text="8."/>
+        <EditText
+            style="@style/WordInput"
+            android:id="@+id/word8"
+            android:layout_toRightOf="@id/num8"
+            android:layout_toEndOf="@id/num8"
+            android:layout_below="@id/word7" />
+
+        <!-- NINE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <Button
+            style="@style/SpeechButton"
+            android:id="@+id/megaphone9"
+            android:layout_alignBottom="@id/num9"
+            android:layout_below="@id/word8"
+            android:background="@drawable/megaphone"
+            android:onClick="play9"/>
+        <TextView
+            style="@style/WordNumber"
+            android:id="@+id/num9"
+            android:layout_below="@id/word8"
+            android:layout_toRightOf="@id/megaphone8"
+            android:layout_toEndOf="@id/megaphone8"
+            android:text="9."/>
+        <EditText
+            style="@style/WordInput"
+            android:id="@+id/word9"
+            android:layout_toRightOf="@id/num9"
+            android:layout_toEndOf="@id/num9"
+            android:layout_below="@id/word8" />
+
+        <!-- TEN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <Button
+            style="@style/SpeechButton"
+            android:id="@+id/megaphone10"
+            android:layout_alignBottom="@id/num10"
+            android:layout_below="@id/word9"
+            android:background="@drawable/megaphone"
+            android:onClick="play10"/>
+        <TextView
+            style="@style/WordNumber"
+            android:id="@+id/num10"
+            android:layout_below="@id/word9"
+            android:layout_toRightOf="@id/megaphone9"
+            android:layout_toEndOf="@id/megaphone9"
+            android:text="10."/>
+        <EditText
+            style="@style/WordInput"
+            android:id="@+id/word10"
+            android:layout_toRightOf="@id/num10"
+            android:layout_toEndOf="@id/num10"
+            android:layout_below="@id/word9" />
+
+        <!-- ELEVEN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <Button
+            style="@style/SpeechButton"
+            android:id="@+id/megaphone11"
+            android:layout_alignBottom="@id/num11"
+            android:layout_below="@id/word10"
+            android:background="@drawable/megaphone"
+            android:onClick="play11"/>
+        <TextView
+            style="@style/WordNumber"
+            android:id="@+id/num11"
+            android:layout_below="@id/word10"
+            android:layout_toRightOf="@id/megaphone10"
+            android:layout_toEndOf="@id/megaphone10"
+            android:text="11."/>
+        <EditText
+            style="@style/WordInput"
+            android:id="@+id/word11"
+            android:layout_toRightOf="@id/num11"
+            android:layout_toEndOf="@id/num11"
+            android:layout_below="@id/word10" />
+
+        <!-- TWELVE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <Button
+            style="@style/SpeechButton"
+            android:id="@+id/megaphone12"
+            android:layout_alignBottom="@id/num12"
+            android:layout_below="@id/word11"
+            android:background="@drawable/megaphone"
+            android:onClick="play12"/>
+        <TextView
+            style="@style/WordNumber"
+            android:id="@+id/num12"
+            android:layout_below="@id/word11"
+            android:layout_toRightOf="@id/megaphone11"
+            android:layout_toEndOf="@id/megaphone11"
+            android:text="12."/>
+        <EditText
+            style="@style/WordInput"
+            android:id="@+id/word12"
+            android:layout_toRightOf="@id/num12"
+            android:layout_toEndOf="@id/num12"
+            android:layout_below="@id/word11" />
+
+        <!-- THIRTEEN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <Button
+            style="@style/SpeechButton"
+            android:id="@+id/megaphone13"
+            android:layout_alignBottom="@id/num13"
+            android:layout_below="@id/word12"
+            android:background="@drawable/megaphone"
+            android:onClick="play13"/>
+        <TextView
+            style="@style/WordNumber"
+            android:id="@+id/num13"
+            android:layout_below="@id/word12"
+            android:layout_toRightOf="@id/megaphone12"
+            android:layout_toEndOf="@id/megaphone12"
+            android:text="13."/>
+        <EditText
+            style="@style/WordInput"
+            android:id="@+id/word13"
+            android:layout_toRightOf="@id/num13"
+            android:layout_toEndOf="@id/num13"
+            android:layout_below="@id/word12" />
+
+        <!-- FOURTEEN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <Button
+            style="@style/SpeechButton"
+            android:id="@+id/megaphone14"
+            android:layout_alignBottom="@id/num14"
+            android:layout_below="@id/word13"
+            android:background="@drawable/megaphone"
+            android:onClick="play14"/>
+        <TextView
+            style="@style/WordNumber"
+            android:id="@+id/num14"
+            android:layout_below="@id/word13"
+            android:layout_toRightOf="@id/megaphone13"
+            android:layout_toEndOf="@id/megaphone13"
+            android:text="14."/>
+        <EditText
+            style="@style/WordInput"
+            android:id="@+id/word14"
+            android:layout_toRightOf="@id/num14"
+            android:layout_toEndOf="@id/num14"
+            android:layout_below="@id/word13" />
+
+        <!-- FIFTEEN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+        <Button
+            style="@style/SpeechButton"
+            android:id="@+id/megaphone15"
+            android:layout_alignBottom="@id/num15"
+            android:layout_below="@id/word14"
+            android:background="@drawable/megaphone"
+            android:onClick="play15"/>
+        <TextView
+            style="@style/WordNumber"
+            android:id="@+id/num15"
+            android:layout_below="@id/word14"
+            android:layout_toRightOf="@id/megaphone14"
+            android:layout_toEndOf="@id/megaphone14"
+            android:text="15."/>
+        <EditText
+            style="@style/WordInput"
+            android:id="@+id/word15"
+            android:layout_toRightOf="@id/num15"
+            android:layout_toEndOf="@id/num15"
+            android:layout_below="@id/word14" />
+
+        <Button
+            style="@style/DifficultyButton"
+            android:id="@+id/finish"
+            android:layout_below="@id/word15"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:text="@string/all_done_spelling"
+            android:onClick="calculate"/>
+
+    </RelativeLayout>
+
+</ScrollView>

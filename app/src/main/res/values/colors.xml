@@ -3,4 +3,12 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <color name="blue">#3066BE</color>
+    <color name="seaGreenDark">#119DA4</color>
+    <color name="blueGray">#6D9DC5</color>
+    <color name="seaGreenLight">#80DED9</color>
+    <color name="seaGreenPale">#AEECEF</color>
+
+    <color name="black">#000000</color>
 </resources>
