@@ -1,10 +1,14 @@
 package com.victoriamatos.cs489groupproj;
 
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,10 +21,12 @@ import java.util.Locale;
 import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
-    public final int NUM_QUESTIONS = 15;
+    public static final int NUM_QUESTIONS = 15;
     private ArrayList<String> allWords;
-    private String[] chosenWords;
-    private TextToSpeech tts;
+    public static String[] chosenWords;
+    public static int[] correct;
+    private static int score;
+    public static TextToSpeech tts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,12 +63,14 @@ public class GameActivity extends AppCompatActivity {
 
         //choose 15 random words
         chosenWords = new String[NUM_QUESTIONS];
+        correct = new int[NUM_QUESTIONS];
         Random rand = new Random();
         int int_random;
         for(int i=0; i<NUM_QUESTIONS; i++){
             int_random = rand.nextInt(allWords.size());
             chosenWords[i] = allWords.get(int_random);
             allWords.remove(int_random);
+            correct[i] = 0;
         }
 
         //setup TTS
@@ -87,9 +95,25 @@ public class GameActivity extends AppCompatActivity {
 
     }
 
-    public void calculate(View v) {
-        //check how many inputs match the words
+    public static int getScore(){
+        return score;
+    }
 
+    public void calculate(View v) {
+        Log.w("GA","Inside calculate");
+        int total = 0;
+        for(int i = 1; i <= NUM_QUESTIONS; i++){
+            int edit_id = this.getResources().getIdentifier("word" + i, "id", this.getPackageName());
+            EditText et = (EditText) findViewById(edit_id);
+            if(et.getText().toString().equals(chosenWords[i-1])){
+                total++;
+                correct[i-1] = 1;
+            }
+        }
+        score = total;
+
+        Intent intent = new Intent(this, GameSolnActivity.class);
+        startActivity(intent);
     }
 
     public void speakWord(String word) {

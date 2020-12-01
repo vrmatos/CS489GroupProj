@@ -23,6 +23,7 @@
                 <action android:name="android.intent.action.TTS_SERVICE" />
             </intent-filter>
         </activity>
+        <activity android:name=".GameSolnActivity"/>
     </application>
 
 </manifest>
