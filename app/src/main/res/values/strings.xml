@@ -13,4 +13,8 @@
 
     <string name="banner2">SPELL THOSE WORDS!</string>
     <string name="all_done_spelling">ALL DONE!</string>
+
+    <string name="welcome_statement">Are you ready to have FUN with learning? Click on a game!</string>
+    <string name="welcome">WELCOME!</string>
+    <string name="games">GAMES:</string>
 </resources>

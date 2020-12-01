@@ -21,7 +21,7 @@
             android:layout_alignBottom="@id/num1"
             android:layout_below="@id/banner2"
             android:background="@drawable/megaphone"
-            android:onClick="play1"/>
+            android:onClick="playWord"/>
         <TextView
             style="@style/WordNumber"
             android:id="@+id/num1"
@@ -43,7 +43,7 @@
             android:layout_alignBottom="@id/num2"
             android:layout_below="@id/word1"
             android:background="@drawable/megaphone"
-            android:onClick="play2"/>
+            android:onClick="playWord"/>
         <TextView
             style="@style/WordNumber"
             android:id="@+id/num2"
@@ -65,7 +65,7 @@
             android:layout_alignBottom="@id/num3"
             android:layout_below="@id/word2"
             android:background="@drawable/megaphone"
-            android:onClick="play3"/>
+            android:onClick="playWord"/>
         <TextView
             style="@style/WordNumber"
             android:id="@+id/num3"
@@ -87,7 +87,7 @@
             android:layout_alignBottom="@id/num4"
             android:layout_below="@id/word3"
             android:background="@drawable/megaphone"
-            android:onClick="play4"/>
+            android:onClick="playWord"/>
         <TextView
             style="@style/WordNumber"
             android:id="@+id/num4"
@@ -109,7 +109,7 @@
             android:layout_alignBottom="@id/num5"
             android:layout_below="@id/word4"
             android:background="@drawable/megaphone"
-            android:onClick="play5"/>
+            android:onClick="playWord"/>
         <TextView
             style="@style/WordNumber"
             android:id="@+id/num5"
@@ -131,7 +131,7 @@
             android:layout_alignBottom="@id/num6"
             android:layout_below="@id/word5"
             android:background="@drawable/megaphone"
-            android:onClick="play6"/>
+            android:onClick="playWord"/>
         <TextView
             style="@style/WordNumber"
             android:id="@+id/num6"
@@ -153,7 +153,7 @@
             android:layout_alignBottom="@id/num7"
             android:layout_below="@id/word6"
             android:background="@drawable/megaphone"
-            android:onClick="play7"/>
+            android:onClick="playWord"/>
         <TextView
             style="@style/WordNumber"
             android:id="@+id/num7"
@@ -175,7 +175,7 @@
             android:layout_alignBottom="@id/num8"
             android:layout_below="@id/word7"
             android:background="@drawable/megaphone"
-            android:onClick="play8"/>
+            android:onClick="playWord"/>
         <TextView
             style="@style/WordNumber"
             android:id="@+id/num8"
@@ -197,7 +197,7 @@
             android:layout_alignBottom="@id/num9"
             android:layout_below="@id/word8"
             android:background="@drawable/megaphone"
-            android:onClick="play9"/>
+            android:onClick="playWord"/>
         <TextView
             style="@style/WordNumber"
             android:id="@+id/num9"
@@ -219,7 +219,7 @@
             android:layout_alignBottom="@id/num10"
             android:layout_below="@id/word9"
             android:background="@drawable/megaphone"
-            android:onClick="play10"/>
+            android:onClick="playWord"/>
         <TextView
             style="@style/WordNumber"
             android:id="@+id/num10"
@@ -241,7 +241,7 @@
             android:layout_alignBottom="@id/num11"
             android:layout_below="@id/word10"
             android:background="@drawable/megaphone"
-            android:onClick="play11"/>
+            android:onClick="playWord"/>
         <TextView
             style="@style/WordNumber"
             android:id="@+id/num11"
@@ -263,7 +263,7 @@
             android:layout_alignBottom="@id/num12"
             android:layout_below="@id/word11"
             android:background="@drawable/megaphone"
-            android:onClick="play12"/>
+            android:onClick="playWord"/>
         <TextView
             style="@style/WordNumber"
             android:id="@+id/num12"
@@ -285,7 +285,7 @@
             android:layout_alignBottom="@id/num13"
             android:layout_below="@id/word12"
             android:background="@drawable/megaphone"
-            android:onClick="play13"/>
+            android:onClick="playWord"/>
         <TextView
             style="@style/WordNumber"
             android:id="@+id/num13"
@@ -307,7 +307,7 @@
             android:layout_alignBottom="@id/num14"
             android:layout_below="@id/word13"
             android:background="@drawable/megaphone"
-            android:onClick="play14"/>
+            android:onClick="playWord"/>
         <TextView
             style="@style/WordNumber"
             android:id="@+id/num14"
@@ -329,7 +329,7 @@
             android:layout_alignBottom="@id/num15"
             android:layout_below="@id/word14"
             android:background="@drawable/megaphone"
-            android:onClick="play15"/>
+            android:onClick="playWord"/>
         <TextView
             style="@style/WordNumber"
             android:id="@+id/num15"

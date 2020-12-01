@@ -1,18 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        style="@style/BannerBox"
+        android:layout_width="match_parent"
+        android:id="@+id/welcome"
+        android:text="@string/welcome"
+        android:background="@color/blue"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        style="@style/GameLabel"
+        android:id="@+id/intro"
+        android:layout_below="@id/welcome"
+        android:text="@string/welcome_statement"/>
+
+    <TextView
+        style="@style/BannerBox"
+        android:layout_width="wrap_content"
+        android:id="@+id/games"
+        android:layout_below="@id/intro"
+        android:text="@string/games"/>
+
+    <Button
+        style="@style/GameButton"
+        android:id="@+id/alphabet_game"
+        android:layout_below="@id/games"
+        android:text="ALPHABET GAME"
+        android:background="@drawable/rounded_corners_blue"/>
+
+    <Button
+        style="@style/GameButton"
+        android:id="@+id/spelling_game"
+        android:layout_below="@id/alphabet_game"
+        android:text="SPELLING GAME"
+        android:background="@drawable/rounded_corners_sea_green_dark"
+        android:onClick="playSpelling"/>
+
+    <Button
+        style="@style/GameButton"
+        android:id="@+id/math_game"
+        android:layout_below="@id/spelling_game"
+        android:text="MATH GAME"
+        android:background="@drawable/rounded_corners_blue"/>
+
+    <Button
+        style="@style/GameButton"
+        android:id="@+id/fun_game"
+        android:layout_below="@id/math_game"
+        android:text="BRAIN BREAK!"
+        android:background="@drawable/rounded_corners_sea_green_dark"/>
+
+</RelativeLayout>
