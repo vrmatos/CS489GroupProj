@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/currScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="15dp"
+        android:text="Your Score:"
+        android:textColor="@color/black"
+        />
+
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/currScore"
+        android:textSize="40dp"
+        android:gravity="center"
+        android:background="@color/seaGreenPale"
+        android:textColor="@color/black"
+        />
+
+    <EditText
+        android:id="@+id/answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/question"
+        android:layout_centerHorizontal="true"
+        android:hint="Answer Here"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        />
+
+    <Button
+        android:id="@+id/checkButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/answer"
+        android:layout_centerHorizontal="true"
+        android:text="Check Answer"
+        android:textSize="20dp"
+        android:onClick="checkAnswer"
+        android:background="@drawable/rounded_corners_blue"
+        />
+
+    <TextView
+        android:id="@+id/answerResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkButton"
+        android:layout_margin="10dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/cont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/answerResult"
+        android:layout_centerHorizontal="true"
+        android:text="Next Question"
+        android:visibility="invisible"
+        android:onClick="newQuestion"
+        android:textColor="@color/black"
+        android:background="@drawable/rounded_corners_pale_green"
+
+        />
+
+
+
+
+    <TextView
+        android:id="@+id/highScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/cont"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:background="@color/seaGreenLight"
+        />
+    <Button
+        android:id="@+id/newGame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/answerResult"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:text="NEW GAME"
+        android:onClick="newGame"
+        android:visibility="invisible"
+        android:background="@drawable/rounded_corners_blue"
+        />
+
+    <Button
+        android:id="@+id/goHome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/highScore"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:text="GO HOME \n (score will not be counted)"
+        android:onClick="goHome"
+        android:background="@drawable/rounded_corners_blue"
+        />
+
+</RelativeLayout>

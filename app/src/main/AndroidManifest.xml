@@ -24,6 +24,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".GameSolnActivity"/>
+        <activity android:name=".MathGameActivity"/>
+        <activity android:name=".MathMainActivity"/>
+
     </application>
 
 </manifest>

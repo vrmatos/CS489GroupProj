@@ -46,7 +46,8 @@
         android:id="@+id/math_game"
         android:layout_below="@id/spelling_game"
         android:text="MATH GAME"
-        android:background="@drawable/rounded_corners_blue"/>
+        android:background="@drawable/rounded_corners_blue"
+        android:onClick="playMath"/>
 
     <Button
         style="@style/GameButton"

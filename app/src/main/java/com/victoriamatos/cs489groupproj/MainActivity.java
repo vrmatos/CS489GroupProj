@@ -21,4 +21,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ChooseDiffActivity.class);
         startActivity(intent);
     }
+    public void playMath(View v){
+        Intent intent = new Intent( this, MathMainActivity.class );
+        startActivity( intent );
+    }
 }

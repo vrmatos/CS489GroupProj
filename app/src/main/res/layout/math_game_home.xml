@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="@style/BannerBox"
+        android:layout_width="match_parent"
+        android:id="@+id/welcome"
+        android:text="Welcome To Math Games"
+        android:background="@color/blue"/>
+
+    <TextView
+        style="@style/GameLabel"
+        android:id="@+id/intro"
+        android:layout_below="@id/welcome"
+        android:text="Are you ready to learn some math? Pick an option!"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="+"
+        android:textSize="25sp"
+        android:id="@+id/addition"
+        android:onClick="goToMathHomePageAdd"
+        android:layout_below="@+id/intro"
+        android:background="@drawable/rounded_corners_blue"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="-"
+        android:textSize="30sp"
+        android:id="@+id/subtraction"
+        android:onClick="goToMathHomePageSub"
+        android:layout_below="@+id/addition"
+        android:background="@drawable/rounded_corners_sea_green_dark"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="x"
+        android:id="@+id/multiplication"
+        android:layout_below="@+id/subtraction"
+        android:onClick="goToMathHomePageMult"
+        android:textSize="20sp"
+        android:background="@drawable/rounded_corners_blue"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="÷"
+        android:textSize="30sp"
+        android:id="@+id/division"
+        android:layout_below="@+id/multiplication"
+        android:onClick="goToMathHomePageDiv"
+        android:background="@drawable/rounded_corners_sea_green_dark"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="Go Home"
+        android:id="@+id/back_home"
+        android:layout_below="@+id/division"
+        android:onClick="goHome"
+        android:textSize="20sp"
+        android:background="@drawable/rounded_corners_blue"
+        />
+
+</RelativeLayout>
