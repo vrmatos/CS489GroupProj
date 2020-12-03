@@ -31,7 +31,8 @@
         android:id="@+id/alphabet_game"
         android:layout_below="@id/games"
         android:text="ALPHABET GAME"
-        android:background="@drawable/rounded_corners_blue"/>
+        android:background="@drawable/rounded_corners_blue"
+        android:onClick="playAlphabet"/>
 
     <Button
         style="@style/GameButton"

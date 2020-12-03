@@ -3,6 +3,7 @@
     package="com.victoriamatos.cs489groupproj">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
     <application
         android:allowBackup="true"
@@ -28,6 +29,7 @@
         <activity android:name=".MathMainActivity"/>
         <activity android:name=".SpaceGameActivity"/>
         <activity android:name=".SpaceGameRules"/>
+        <activity android:name=".AlphabetActivity"/>
 
     </application>
 

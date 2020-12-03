@@ -31,4 +31,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent( this, SpaceGameRules.class );
         startActivity( intent );
     }
+
+
+    public void playAlphabet(View v){
+        Log.w("MA", "inside play game");
+        Intent intent = new Intent( this, AlphabetActivity.class );
+        startActivity( intent );
+    }
 }
