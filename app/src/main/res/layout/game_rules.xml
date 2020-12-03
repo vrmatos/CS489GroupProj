@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        style="@style/BannerBox"
+        android:layout_width="match_parent"
+        android:id="@+id/banner"
+        android:text="@string/space_race"
+        android:background="@color/blue"/>
+
+    <TextView
+        android:id="@+id/rules_banner"
+        style="@style/BannerBox"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/banner"
+        android:layout_marginTop="2dp"
+        android:text="@string/rules_banner" />
+
+    <TextView
+        style="@style/RuleStep"
+        android:id="@+id/step1"
+        android:layout_below="@id/rules_banner"
+        android:text="1.Get your spaceship to the top of the screen before getting hit by debris." />
+
+    <TextView
+        style="@style/RuleStep"
+        android:id="@+id/step2"
+        android:layout_below="@id/step1"
+        android:text="2. If you get his by debris you lose." />
+
+    <TextView
+        style="@style/RuleStep"
+        android:id="@+id/step3"
+        android:layout_below="@id/step2"
+        android:text="3. If you get to the top of the screen without getting hit, you win." />
+
+
+
+    <Button
+        android:id="@+id/start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/step3"
+        android:text="START"
+        android:onClick="startGame"
+        android:textSize="20sp"
+        android:background="@color/seaGreenPale"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="Go Home"
+        android:id="@+id/back_home"
+        android:layout_below="@+id/start"
+        android:onClick="goHome"
+        android:textSize="20sp"
+        android:background="@drawable/rounded_corners_blue"
+        />
+</RelativeLayout>

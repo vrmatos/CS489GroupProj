@@ -54,6 +54,7 @@
         android:id="@+id/fun_game"
         android:layout_below="@id/math_game"
         android:text="BRAIN BREAK!"
-        android:background="@drawable/rounded_corners_sea_green_dark"/>
+        android:background="@drawable/rounded_corners_sea_green_dark"
+        android:onClick="playGame"/>
 
 </RelativeLayout>

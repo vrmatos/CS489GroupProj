@@ -25,4 +25,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent( this, MathMainActivity.class );
         startActivity( intent );
     }
+
+    public void playGame(View v){
+        Log.w("MA", "inside play game");
+        Intent intent = new Intent( this, SpaceGameRules.class );
+        startActivity( intent );
+    }
 }

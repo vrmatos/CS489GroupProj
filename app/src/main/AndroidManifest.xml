@@ -26,6 +26,8 @@
         <activity android:name=".GameSolnActivity"/>
         <activity android:name=".MathGameActivity"/>
         <activity android:name=".MathMainActivity"/>
+        <activity android:name=".SpaceGameActivity"/>
+        <activity android:name=".SpaceGameRules"/>
 
     </application>
 
