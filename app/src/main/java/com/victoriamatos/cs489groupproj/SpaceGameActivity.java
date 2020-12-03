@@ -58,7 +58,7 @@ public class SpaceGameActivity extends AppCompatActivity {
         SoundPool.Builder builder = new SoundPool.Builder();
         builder.setMaxStreams(1);
         pool = builder.build();
-        // soundId = pool.load(this,R.raw.paddle_hit, 1);
+        soundId = pool.load(this,R.raw.explosion, 1);
     }
 
     /**

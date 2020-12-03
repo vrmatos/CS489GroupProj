@@ -22,9 +22,8 @@ public class GameTimerTask extends TimerTask {
     public void run(){
         //update model/game
         if(game.checkHit() == 5 || game.checkHitBall2()==5 || game.checkHitBall3() ==5 || game.checkHitBall4() ==5
-                ||game.checkHitBall5()==5) {//4 = the hitPaddle number
-           // ((SpaceGameActivity) gameView.getContext()).playHitSound();
-
+                ||game.checkHitBall5()==5) {
+            ((SpaceGameActivity) gameView.getContext()).playHitSound();
         }
         game.moveBall();
         game.moveBall2();

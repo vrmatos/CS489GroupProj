@@ -50,26 +50,18 @@ public class Game {
     private boolean moveLeft;
     private boolean moveDown;
 
-    /** Scores information */
-    private int score;
-    private int bestScore;
-
-    /**
-     * Persistent Data constructor
-     * @param context
-     */
-    public Game(Context context){
-        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
-        setBestScore(pref.getInt("bestScore",0));
-    }
 
     /**
      * Game constructor for GameView
      * @param context
      * @param newShip
      * @param newBall
-     * @param newBallRadius
-     * @param newBallSpeed
+     * @param newBall2
+     * @param newBall3
+     * @param newBall4
+     * @param newBall5
+     * @param newBallRadius - for all 5 balls
+     * @param newBallSpeed - for all 5 balls
      * @param height (of screen)
      * @param width (of screen)
      */
@@ -77,10 +69,6 @@ public class Game {
                 int newBallRadius,int newBall2Radius, int newBall3Radius, int newBall4Radius, int newBall5Radius,
                 float newBallSpeed, float newBall2Speed, float newBall3Speed,float newBall4Speed,float newBall5Speed,
                 int height, int width){
-        //account for persistent data
-        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
-        setBestScore(pref.getInt("bestScore",0));
-
         //initialize necessary Game information
         setShip(newShip);
         setBall(newBall);
@@ -113,7 +101,9 @@ public class Game {
         this.width = width;
         moveLeft = false;
         moveDown = true;
-        score = 0;
+    }
+
+    public Game(SpaceGameRules spaceGameRules) {
     }
 
     /** Getter methods */
@@ -130,9 +120,6 @@ public class Game {
     public float getBall3Radius(){ return ball3Radius;}
     public float getBall4Radius(){ return ball4Radius;}
     public float getBall5Radius(){ return ball5Radius;}
-
-    public int getBestScore(){return bestScore;}
-    public int getScore(){return score;}
 
     /** Setter methods */
     public void setShip(Rect newShip){ship = newShip;}
@@ -158,10 +145,6 @@ public class Game {
     public void setBall5Angle(float newBall5Angle){ ball5Angle = newBall5Angle;}
     public void setBall5Radius(int newBall5Radius) { ball5Radius = newBall5Radius; }
 
-
-
-
-    public void setBestScore(int newBestScore){bestScore = newBestScore;}
     public void setDeltaTime(int newDeltaTime){
         if(newDeltaTime > 0)
             deltaTime = newDeltaTime;
@@ -431,9 +414,6 @@ public class Game {
         }
         else if (hitShip())
         {
-            //  score++;
-            // moveDown = false;
-            Log.w("MA", "ship was hit");
             return 5;
         }
         return 0;
@@ -444,7 +424,8 @@ public class Game {
         if(hitLeftBall2()) {
             moveLeft = false;
             return 1;
-        }else if (hitRightBall2()) {
+        }
+        else if (hitRightBall2()) {
             moveLeft = true;
             return 2;
         }
@@ -458,8 +439,6 @@ public class Game {
         }
         else if (hitShip2())
         {
-            //score++;
-            //moveDown = false;
             return 5;
         }
         return 0;
@@ -484,8 +463,6 @@ public class Game {
         }
         else if (hitShip3())
         {
-            //score++;
-            // moveDown = false;
             return 5;
         }
         return 0;
@@ -510,8 +487,6 @@ public class Game {
         }
         else if (hitShip4())
         {
-            //score++;
-            //moveDown = false;
             return 5;
         }
         return 0;
@@ -536,8 +511,6 @@ public class Game {
         }
         else if (hitShip5())
         {
-            // score++;
-            // moveDown = false;
             return 5;
         }
         return 0;
