@@ -7,20 +7,17 @@ import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Random;
 
-public class GameActivity extends AppCompatActivity {
+public class SpellingGameActivity extends AppCompatActivity {
     public static final int NUM_QUESTIONS = 15;
     private ArrayList<String> allWords;
     public static String[] chosenWords;
@@ -40,7 +37,7 @@ public class GameActivity extends AppCompatActivity {
             //decide set of words based on ChooseDiffActivity's level
             AssetManager am = getApplicationContext().getAssets();
             InputStream is;
-            switch(ChooseDiffActivity.level){
+            switch(SpellingMainActivity.level){
                 case 2:
                     is = getApplicationContext().getAssets().open("medium.txt");
                     break;
@@ -112,7 +109,7 @@ public class GameActivity extends AppCompatActivity {
         }
         score = total;
 
-        Intent intent = new Intent(this, GameSolnActivity.class);
+        Intent intent = new Intent(this, SpellingSolnActivity.class);
         startActivity(intent);
     }
 

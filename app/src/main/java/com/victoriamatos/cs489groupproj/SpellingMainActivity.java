@@ -7,7 +7,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ChooseDiffActivity extends AppCompatActivity {
+public class SpellingMainActivity extends AppCompatActivity {
     public static int level;
 
     @Override
@@ -22,21 +22,21 @@ public class ChooseDiffActivity extends AppCompatActivity {
     public void playEasy(View v){
         Log.w("CDA","Inside playEasy");
         level = 1;
-        Intent intent = new Intent(this, GameActivity.class);
+        Intent intent = new Intent(this, SpellingGameActivity.class);
         startActivity(intent);
     }
 
     public void playMedium(View v){
         level = 2;
         Log.w("CDA","Inside playMedium");
-        Intent intent = new Intent(this, GameActivity.class);
+        Intent intent = new Intent(this, SpellingGameActivity.class);
         startActivity(intent);
     }
 
     public void playHard(View v){
         level = 3;
         Log.w("CDA","Inside playHard");
-        Intent intent = new Intent(this, GameActivity.class);
+        Intent intent = new Intent(this, SpellingGameActivity.class);
         startActivity(intent);
     }
 

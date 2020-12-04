@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void playSpelling(View v){
         Log.w("MA","Inside playSpelling");
-        Intent intent = new Intent(this, ChooseDiffActivity.class);
+        Intent intent = new Intent(this, SpellingMainActivity.class);
         startActivity(intent);
     }
     public void playMath(View v){
@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent( this, SpaceGameRules.class );
         startActivity( intent );
     }
-
 
     public void playAlphabet(View v){
         Log.w("MA", "inside play game");

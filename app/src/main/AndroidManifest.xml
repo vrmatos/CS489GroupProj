@@ -18,13 +18,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ChooseDiffActivity"/>
-        <activity android:name=".GameActivity">
+        <activity android:name=".SpellingMainActivity"/>
+        <activity android:name=".SpellingGameActivity">
             <intent-filter>
                 <action android:name="android.intent.action.TTS_SERVICE" />
             </intent-filter>
         </activity>
-        <activity android:name=".GameSolnActivity"/>
+        <activity android:name=".SpellingSolnActivity"/>
         <activity android:name=".MathGameActivity"/>
         <activity android:name=".MathMainActivity"/>
         <activity android:name=".SpaceGameActivity"/>
