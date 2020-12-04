@@ -83,7 +83,9 @@ public class AlphabetActivity extends AppCompatActivity {
                     textview_id.setBackgroundColor(Color.GREEN);
                     break;
                 default:
-                    Toast toast = Toast.makeText(getApplicationContext(), "Sorrt", Toast.LENGTH_SHORT);
+                    textview_id.setText("red");
+                    textview_id.setBackgroundColor(Color.RED);
+                    Toast toast = Toast.makeText(getApplicationContext(), "Sorry that is not correct!", Toast.LENGTH_LONG);
                     toast.show();
                     break;
             }
