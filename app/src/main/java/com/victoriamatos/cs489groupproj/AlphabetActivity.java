@@ -30,6 +30,7 @@ public class AlphabetActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.alphabet_layout);
         textview_id = (TextView) findViewById(R.id.text);
+        getSupportActionBar().hide();
 
         // check if voice recognition is installed
         PackageManager manager = getPackageManager();

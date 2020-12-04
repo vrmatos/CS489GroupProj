@@ -19,6 +19,7 @@ public class SpaceGameRules extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game_rules);
         game = new Game(this);
+        getSupportActionBar().hide();
     }
 
     public void startGame(View v){
