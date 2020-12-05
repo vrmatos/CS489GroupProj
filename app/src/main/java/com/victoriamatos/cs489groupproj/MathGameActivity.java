@@ -1,6 +1,8 @@
 package com.victoriamatos.cs489groupproj;
 
 import android.content.Intent;
+import android.media.SoundPool;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -8,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MathGameActivity extends AppCompatActivity {
@@ -20,6 +23,9 @@ public class MathGameActivity extends AppCompatActivity {
     private Button overButton;
     private TextView isHighET;
 
+    private SoundPool pool;
+    private int hitSoundId;
+
 
     private static MathGame mathGame;
     private int curr_score;
@@ -27,6 +33,7 @@ public class MathGameActivity extends AppCompatActivity {
     private TextView equationET;
     private char myType;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +74,13 @@ public class MathGameActivity extends AppCompatActivity {
             mathGame.setHighScoreSub(high_score_sub);
             mathGame.setHighScoreMult(high_score_mult);
             mathGame.setHighScoreDiv(high_score_div);
+
+            //sound
+            SoundPool.Builder builder = new SoundPool.Builder();
+            builder.setMaxStreams( 2 );
+            pool = builder.build();
+            hitSoundId = pool.load( this, R.raw.ding, 1 );
+
 
         }
     }
@@ -109,6 +123,7 @@ public class MathGameActivity extends AppCompatActivity {
 
         int givenAnser = Integer.valueOf(givenAnswerET.getText().toString());
         if(mathGame.isCorrectAnswer(givenAnser)){
+            playHitSound();
             //mathGame.incCurrScore();
             currScoreEt = (TextView) findViewById(R.id.currScore);
             curr_score = mathGame.getCurrScore();
@@ -202,6 +217,11 @@ public class MathGameActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
+    public void playHitSound( ) {
+        pool.play( hitSoundId, 1.0f, 1.0f, 0, 0, 1.0f );
+    }
+
 
 }
 
