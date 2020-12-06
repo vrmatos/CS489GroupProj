@@ -84,7 +84,6 @@ public class AlphabetActivity extends AppCompatActivity {
                 Toast toast = Toast.makeText(getApplicationContext(), "Good Job!", Toast.LENGTH_LONG);
                 toast.show();
             } else {
-                textview_id.setText("red");
                 textview_id.setBackgroundColor(Color.RED);
                 Toast toast = Toast.makeText(getApplicationContext(), "Sorry that is not correct!", Toast.LENGTH_LONG);
                 toast.show();
