@@ -62,6 +62,7 @@ public class SpellingGameActivity extends AppCompatActivity {
         }
         Intent intent = new Intent(this, SpellingSolnActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_up,0);
     }
 
     public void playWord(View v){

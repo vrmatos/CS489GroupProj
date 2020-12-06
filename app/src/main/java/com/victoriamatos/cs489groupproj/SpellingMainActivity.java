@@ -40,6 +40,7 @@ public class SpellingMainActivity extends AppCompatActivity {
         level = 1;
         Intent intent = new Intent(this, SpellingGameActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_from_left,0);
     }
 
     public void playMedium(View v){
@@ -47,6 +48,7 @@ public class SpellingMainActivity extends AppCompatActivity {
         Log.w("CDA","Inside playMedium");
         Intent intent = new Intent(this, SpellingGameActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_from_left,0);
     }
 
     public void playHard(View v){
@@ -54,6 +56,7 @@ public class SpellingMainActivity extends AppCompatActivity {
         Log.w("CDA","Inside playHard");
         Intent intent = new Intent(this, SpellingGameActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_from_left,0);
     }
 
 }

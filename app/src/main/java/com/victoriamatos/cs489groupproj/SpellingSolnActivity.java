@@ -53,11 +53,13 @@ public class SpellingSolnActivity extends AppCompatActivity {
     public void playAgain(View v){
         Intent intent = new Intent(this, SpellingMainActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.fade_in_and_scale,0);
     }
 
     public void backHome(View v){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.fade_in_and_scale,0);
     }
 
     public void playWord(View v){
