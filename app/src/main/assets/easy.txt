@@ -2,7 +2,6 @@ aglet
 assassin
 balloon
 beige
-cache
 campaign
 cellist
 cough
@@ -14,7 +13,6 @@ fiery
 fight
 gerbil
 gorilla
-governor
 height
 honest
 horizon
@@ -46,10 +44,8 @@ rhyme
 scissors
 science
 sincere
-sword
 strength
 tattoo
-thaw
 thief
 trample
 villain
