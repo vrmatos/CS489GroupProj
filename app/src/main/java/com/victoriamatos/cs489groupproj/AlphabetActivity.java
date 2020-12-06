@@ -78,7 +78,7 @@ public class AlphabetActivity extends AppCompatActivity {
             //float[] scores = data.getFloatArrayExtra(RecognizerIntent.EXTRA_CONFIDENCE_SCORES);
             Log.w("MA", "word: " + returnedWords.get(0));
             if ("A B C D E F G H I J K L M N O P Q R S T U V W X Y and Z".equals(returnedWords.get(0))
-                    || "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z".equals(returnedWords.get(0))) {
+                    || "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z".equals(returnedWords.get(0)) ||"ABCDEFGHIJKLMNOPQRSTUVWXYZ".equals(returnedWords.get(0))) {
                 textview_id.setText("green");
                 textview_id.setBackgroundColor(Color.GREEN);
                 Toast toast = Toast.makeText(getApplicationContext(), "Good Job!", Toast.LENGTH_LONG);

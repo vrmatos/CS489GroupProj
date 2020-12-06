@@ -52,7 +52,7 @@ public class GameView extends View {
         ships = BitmapFactory.decodeResource( getResources(), TARGET );
 
         game = new Game(context, ship, ball, ball2, ball3, ball4, ball5, 20,
-                40, 50, 40,40, width*0.0005f, width*0.0005f,width*0.0005f, width*0.0005f, width*0.0005f,  height, width);
+                40, 30, 40,40, width*0.0005f, width*0.0005f,width*0.0005f, width*0.0005f, width*0.0005f,  height, width);
         game.setDeltaTime(DELTA_TIME);
 
     }
