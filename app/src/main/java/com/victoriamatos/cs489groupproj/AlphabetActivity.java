@@ -60,7 +60,7 @@ public class AlphabetActivity extends AppCompatActivity {
 
     public void listen( ) {
         Intent intentToListen = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH );
-        intentToListen.putExtra( RecognizerIntent.EXTRA_PROMPT, "Say something" );
+        intentToListen.putExtra( RecognizerIntent.EXTRA_PROMPT, "Say the alphabet in order" );
         intentToListen.putExtra( RecognizerIntent.EXTRA_MAX_RESULTS, 26 );
         intentToListen.putExtra( RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM );
 
@@ -77,17 +77,17 @@ public class AlphabetActivity extends AppCompatActivity {
             ArrayList<String> returnedWords = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
             //float[] scores = data.getFloatArrayExtra(RecognizerIntent.EXTRA_CONFIDENCE_SCORES);
             Log.w("MA", "word: " + returnedWords.get(0));
-            switch (returnedWords.get(0)) {
-                case "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z":
-                    textview_id.setText("green");
-                    textview_id.setBackgroundColor(Color.GREEN);
-                    break;
-                default:
-                    textview_id.setText("red");
-                    textview_id.setBackgroundColor(Color.RED);
-                    Toast toast = Toast.makeText(getApplicationContext(), "Sorry that is not correct!", Toast.LENGTH_LONG);
-                    toast.show();
-                    break;
+            if ("A B C D E F G H I J K L M N O P Q R S T U V W X Y and Z".equals(returnedWords.get(0))
+                    || "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z".equals(returnedWords.get(0))) {
+                textview_id.setText("green");
+                textview_id.setBackgroundColor();
+                Toast toast = Toast.makeText(getApplicationContext(), "Good Job!", Toast.LENGTH_LONG);
+                toast.show();
+            } else {
+                textview_id.setText("red");
+                textview_id.setBackgroundColor(Color.RED);
+                Toast toast = Toast.makeText(getApplicationContext(), "Sorry that is not correct!", Toast.LENGTH_LONG);
+                toast.show();
             }
         }
     }
