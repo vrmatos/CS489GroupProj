@@ -12,12 +12,21 @@
         android:id="@+id/welcome"
         android:text="@string/welcome"
         android:background="@color/blue"/>
+    <AnalogClock
+        android:id="@+id/clock"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="120dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcome"
+        />
 
     <TextView
         style="@style/GameLabel"
         android:id="@+id/intro"
-        android:layout_below="@id/welcome"
+        android:layout_below="@id/clock"
         android:text="@string/welcome_statement"/>
+
 
     <TextView
         style="@style/BannerBox"
