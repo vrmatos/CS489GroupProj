@@ -68,4 +68,14 @@
         android:background="@drawable/rounded_corners_sea_green_dark"
         android:onClick="playGame"/>
 
+    <!--LinearLayout
+        android:orientation="vertical"
+        android:layout_height="10dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/ad_view"
+        android:layout_marginTop="100dp"
+        android:layout_below="@id/fun_game"
+        android:background="#FFFFFF00"></LinearLayout-->
+
 </RelativeLayout>
