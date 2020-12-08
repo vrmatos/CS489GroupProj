@@ -12,6 +12,7 @@ public class SpellingMainActivity extends AppCompatActivity {
     public static int level;
     private SpellingGame game;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
