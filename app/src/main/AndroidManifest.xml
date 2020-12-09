@@ -6,8 +6,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
-    <!--uses-permission android:name="android.permission.INTERNET"/-->
-    <!--uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -35,11 +35,9 @@
         <activity android:name=".SpaceGameRules"/>
         <activity android:name=".AlphabetActivity"/>
 
-        <!--activity android:name="com.google.android.gms.ads.AdActivity"
-            android:theme="@android:style/Theme.Translucent"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/-->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~6300978111" />
 
     </application>
-    <!--meta-data
-        android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/-->
 </manifest>
