@@ -74,7 +74,7 @@ public class GameView extends View {
         canvas.drawCircle(game.getBall4().x, game.getBall4().y, game.getBall4Radius(), paint);
         canvas.drawCircle(game.getBall5().x, game.getBall5().y, game.getBall5Radius(), paint);
 
-        paint.setColor(Color.BLUE);
+        paint.setColor(Color.BLACK);
         //draw the ship
         canvas.drawRect(game.getShip(), paint);
 
