@@ -41,13 +41,13 @@ public class GameView extends View {
         paint.setAntiAlias(true);
 
         //setup game
-        ship = new Rect(410, height-200, 590,height-20);
+        ship = new Rect(350, height-100, 410,height);
 
-        Point ball = new Point(650, 50);
-        Point ball2 = new Point(600, 850);
-        Point ball3 = new Point(300, 1300);
-        Point ball4 = new Point(60, 300);
-        Point ball5 = new Point(900, 1200);
+        Point ball = new Point(100, 50);
+        Point ball2 = new Point(200, 400);
+        Point ball3 = new Point(300, 600);
+        Point ball4 = new Point(200, 100);
+        Point ball5 = new Point(300, 200);
 
         ships = BitmapFactory.decodeResource( getResources(), TARGET );
 
@@ -96,12 +96,14 @@ public class GameView extends View {
      * @param
      */
     public void endGame(Canvas canvas) {
-        paint.setTextSize(90);
+        paint.setTextSize(50);
         //if current score is the best score, record that and bring according message
         if (win) {
-            canvas.drawText("Congrats! You Win!!", 200, 550, paint);
+            paint.setColor(Color.BLUE);
+            canvas.drawText("Congrats! You Win!!", 100, 550, paint);
         } else {
-            canvas.drawText("Try again! You Lose!", 200, 550, paint);
+            paint.setColor(Color.BLUE);
+            canvas.drawText("Try again! You Lose!", 100, 550, paint);
         }
     }
 
