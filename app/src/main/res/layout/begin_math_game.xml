@@ -24,7 +24,7 @@
         style="@style/RuleStep"
         android:id="@+id/step1"
         android:layout_below="@id/rules_banner"
-        android:text="1.Game will continue unil you get an incorrect answer." />
+        android:text="1.Game will continue until you get an incorrect answer." />
 
     <TextView
         style="@style/RuleStep"

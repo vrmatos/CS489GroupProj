@@ -46,7 +46,7 @@ public class GameView extends View {
         Point ball = new Point(100, 50);
         Point ball2 = new Point(200, 400);
         Point ball3 = new Point(300, 600);
-        Point ball4 = new Point(200, 100);
+        Point ball4 = new Point(800, 100);
         Point ball5 = new Point(300, 200);
 
         ships = BitmapFactory.decodeResource( getResources(), TARGET );

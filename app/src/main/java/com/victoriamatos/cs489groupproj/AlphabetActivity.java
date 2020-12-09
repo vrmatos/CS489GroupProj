@@ -78,14 +78,12 @@ public class AlphabetActivity extends AppCompatActivity {
             //float[] scores = data.getFloatArrayExtra(RecognizerIntent.EXTRA_CONFIDENCE_SCORES);
             Log.w("MA", "word: " + returnedWords.get(0));
             if ("ABCDEFGHIJKLMNOPQRSTUVWXYZ".equals(returnedWords.get(0).replaceAll(" ","").toUpperCase())) {
-                textview_id.setText("green");
-                textview_id.setBackgroundColor(Color.GREEN);
-                Toast toast = Toast.makeText(getApplicationContext(), "Good Job!", Toast.LENGTH_LONG);
-                toast.show();
+                Intent intent = new Intent( this, AlphabetCorrect.class );
+                startActivity( intent );
             } else {
-                textview_id.setBackgroundColor(Color.RED);
-                Toast toast = Toast.makeText(getApplicationContext(), "Sorry that is not correct!", Toast.LENGTH_LONG);
-                toast.show();
+                Intent intent = new Intent( this, AlphabetWrong.class );
+                intent.putExtra("attempt", returnedWords.get(0));
+                startActivity( intent );
             }
         }
     }

@@ -50,6 +50,19 @@ public class Game {
     private boolean moveLeft;
     private boolean moveDown;
 
+    private boolean moveLeft2;
+    private boolean moveDown2;
+
+    private boolean moveLeft3;
+    private boolean moveDown3;
+
+
+    private boolean moveLeft4;
+    private boolean moveDown4;
+
+    private boolean moveLeft5;
+    private boolean moveDown5;
+
 
     /**
      * Game constructor for GameView
@@ -190,12 +203,12 @@ public class Game {
 
     public void moveBall2(){
         // decides up/down movement
-        if(moveDown)
+        if(moveDown2)
             ball2.y += ball2Speed * Math.sin(ball2Angle) * deltaTime;
         else
             ball2.y -= ball2Speed * Math.sin(ball2Angle) * deltaTime;
         // decides left/right movement
-        if(moveLeft)
+        if(moveLeft2)
             ball2.x -= ball2Speed * Math.cos(ball2Angle) * deltaTime;
         else
             ball2.x += ball2Speed * Math.sin(ball2Angle) * deltaTime;
@@ -203,12 +216,12 @@ public class Game {
 
     public void moveBall3(){
         // decides up/down movement
-        if(moveDown)
+        if(moveDown3)
             ball3.y += ball3Speed * Math.sin(ball3Angle) * deltaTime;
         else
             ball3.y -= ball3Speed * Math.sin(ball3Angle) * deltaTime;
         // decides left/right movement
-        if(moveLeft)
+        if(moveLeft3)
             ball3.x -= ball3Speed * Math.cos(ball3Angle) * deltaTime;
         else
             ball3.x += ball3Speed * Math.sin(ball3Angle) * deltaTime;
@@ -216,12 +229,12 @@ public class Game {
 
     public void moveBall4(){
         // decides up/down movement
-        if(moveDown)
+        if(moveDown4)
             ball4.y += ball4Speed * Math.sin(ball4Angle) * deltaTime;
         else
             ball4.y -= ball4Speed * Math.sin(ball4Angle) * deltaTime;
         // decides left/right movement
-        if(moveLeft)
+        if(moveLeft4)
             ball4.x -= ball4Speed * Math.cos(ball4Angle) * deltaTime;
         else
             ball4.x += ball4Speed * Math.sin(ball4Angle) * deltaTime;
@@ -230,12 +243,12 @@ public class Game {
 
     public void moveBall5(){
         // decides up/down movement
-        if(moveDown)
+        if(moveDown5)
             ball5.y += ball5Speed * Math.sin(ball5Angle) * deltaTime;
         else
             ball5.y -= ball5Speed * Math.sin(ball5Angle) * deltaTime;
         // decides left/right movement
-        if(moveLeft)
+        if(moveLeft5)
             ball5.x -= ball5Speed * Math.cos(ball5Angle) * deltaTime;
         else
             ball5.x += ball5Speed * Math.sin(ball5Angle) * deltaTime;
@@ -422,19 +435,19 @@ public class Game {
     public int checkHitBall2()
     {
         if(hitLeftBall2()) {
-            moveLeft = false;
+            moveLeft2 = false;
             return 1;
         }
         else if (hitRightBall2()) {
-            moveLeft = true;
+            moveLeft2 = true;
             return 2;
         }
         if(hitTopBall2()) {
-            moveDown = true;
+            moveDown2 = true;
             return 3;
         }
         else if(hitBottomBall2()) {
-            moveDown = false;
+            moveDown2 = false;
             return 4;
         }
         else if (hitShip2())
@@ -447,18 +460,18 @@ public class Game {
     public int checkHitBall3()
     {
         if(hitLeftBall3()) {
-            moveLeft = false;
+            moveLeft3 = false;
             return 1;
         }else if (hitRightBall3()) {
-            moveLeft = true;
+            moveLeft3 = true;
             return 2;
         }
         if(hitTopBall3()) {
-            moveDown = true;
+            moveDown3 = true;
             return 3;
         }
         else if(hitBottomBall3()) {
-            moveDown = false;
+            moveDown3 = false;
             return 4;
         }
         else if (hitShip3())
@@ -471,18 +484,18 @@ public class Game {
     public int checkHitBall4()
     {
         if(hitLeftBall4()) {
-            moveLeft = false;
+            moveLeft4 = false;
             return 1;
         }else if (hitRightBall4()) {
-            moveLeft = true;
+            moveLeft4 = true;
             return 2;
         }
         if(hitTopBall4()) {
-            moveDown = true;
+            moveDown4 = true;
             return 3;
         }
         else if(hitBottomBall4()) {
-            moveDown = false;
+            moveDown4 = false;
             return 4;
         }
         else if (hitShip4())
@@ -495,18 +508,18 @@ public class Game {
     public int checkHitBall5()
     {
         if(hitLeftBall5()) {
-            moveLeft = false;
+            moveLeft5 = false;
             return 1;
         }else if (hitRightBall5()) {
-            moveLeft = true;
+            moveLeft5 = true;
             return 2;
         }
         if(hitTopBall5()) {
-            moveDown = true;
+            moveDown5 = true;
             return 3;
         }
         else if(hitBottomBall5()) {
-            moveDown = false;
+            moveDown5 = false;
             return 4;
         }
         else if (hitShip5())
