@@ -100,10 +100,10 @@ public class GameView extends View {
         //if current score is the best score, record that and bring according message
         if (win) {
             paint.setColor(Color.BLUE);
-            canvas.drawText("Congrats! You Win!!", 100, 550, paint);
+            canvas.drawText("Congrats! You Win!!", 160, 600, paint);
         } else {
             paint.setColor(Color.BLUE);
-            canvas.drawText("Try again! You Lose!", 100, 550, paint);
+            canvas.drawText("Try again! You Lose!", 160, 600, paint);
         }
     }
 

@@ -10,6 +10,8 @@
         android:layout_width="match_parent"
         android:layout_above="@+id/whatsWrong"
         android:id="@+id/banner"
+        android:layout_marginLeft="@android:dimen/app_icon_size"
+        android:layout_centerInParent="true"
         android:text="Sorry you were wrong!"
         android:background="@color/blue"
         android:layout_marginBottom="10dp"
