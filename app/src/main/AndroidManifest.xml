@@ -34,6 +34,8 @@
         <activity android:name=".SpaceGameActivity"/>
         <activity android:name=".SpaceGameRules"/>
         <activity android:name=".AlphabetActivity"/>
+        <activity android:name=".AlphabetCorrect"/>
+        <activity android:name=".AlphabetWrong"/>
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
