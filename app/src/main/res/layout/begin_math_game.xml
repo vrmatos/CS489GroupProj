@@ -9,7 +9,7 @@
         style="@style/BannerBox"
         android:layout_width="match_parent"
         android:id="@+id/banner"
-        android:text="@string/banner"
+        android:text="PRACTICE YOUR MATH!"
         android:background="@color/blue"/>
 
     <TextView
