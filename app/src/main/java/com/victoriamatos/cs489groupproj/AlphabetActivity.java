@@ -1,3 +1,6 @@
+/**
+ * Authors: Victoria Matos, Julia Hart, Kaytin Matrangola
+ */
 package com.victoriamatos.cs489groupproj;
 
 
