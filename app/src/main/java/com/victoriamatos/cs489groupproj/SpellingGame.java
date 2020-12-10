@@ -21,6 +21,7 @@ import java.util.Random;
 
 public class SpellingGame {
     public static final int NUM_QUESTIONS = 15;
+
     public static String[] chosenWords;
     public static int[] correct;
     private static int score;
@@ -32,20 +33,22 @@ public class SpellingGame {
 
     public SpellingGame(Context context){
         Log.w("SG", "Init SpellingGame");
+        //initialize chosenWords, correct, and score
         chosenWords = new String[NUM_QUESTIONS];
         correct = new int[NUM_QUESTIONS];
         score = 0;
+
+        //persistent data
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
         setBestScoreEasy(pref.getInt("bestScoreEasy",0));
         setBestScoreMedium(pref.getInt("bestScoreMedium",0));
         setBestScoreHard(pref.getInt("bestScoreHard",0));
 
-        //setup TTS
+        //setup TextToSpeech
         tts = new TextToSpeech(context, new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int i) {
                 Log.w("MA", "inside onInit");
-
                 if (i != TextToSpeech.ERROR) {
                     int result = tts.setLanguage(Locale.US);
                     Log.w("MA", "set language");
@@ -62,10 +65,26 @@ public class SpellingGame {
 
     }
 
-    public void chooseWords(InputStream is){
+    /**
+     * Choose NUM_QUESTIONS amount of words to be spelled from the chosen level text file
+     * @param context
+     */
+    public void chooseWords(Context context){
         //make that textfile set of words into an ArrayList
         ArrayList<String> allWords = new ArrayList<>();
         try {
+            AssetManager am = context.getAssets();
+            InputStream is;
+            switch(level){
+                case 2:
+                    is = context.getAssets().open("medium.txt");
+                    break;
+                case 3:
+                    is = context.getAssets().open("hard.txt");
+                    break;
+                default:
+                    is = context.getAssets().open("easy.txt");
+            }
             BufferedReader br = new BufferedReader(new InputStreamReader(is));
             String word = br.readLine();
             while (word != null) {
@@ -88,10 +107,16 @@ public class SpellingGame {
         }
     }
 
+    /** Setter methods */
     public void setLevel(int newLevel){level = newLevel;}
     public void setBestScoreEasy(int newScore){bestScoreEasy = newScore;}
     public void setBestScoreMedium(int newScore){bestScoreMedium = newScore;}
     public void setBestScoreHard(int newScore){bestScoreHard = newScore;}
+
+    /**
+     * General setter for BestScore, done based on level
+     * @param newBestScore
+     */
     public void setBestScore(int newBestScore){
         switch (level){
             case 2:
@@ -109,6 +134,16 @@ public class SpellingGame {
         }
     }
 
+    /** Getter methods */
+    public int getScore(){return score;}
+    public int getBestScoreEasy(){return bestScoreEasy;}
+    public int getBestScoreMedium(){return bestScoreMedium;}
+    public int getBestScoreHard(){return bestScoreHard;}
+
+    /**
+     * Gets the best score based on the level
+     * @return
+     */
     public int getBestScore(){
         switch (level){
             case 2:
@@ -119,13 +154,12 @@ public class SpellingGame {
                 return bestScoreEasy;
         }
     }
-    public int getScore(){return score;}
-    public int getBestScoreEasy(){return bestScoreEasy;}
-    public int getBestScoreMedium(){return bestScoreMedium;}
-    public int getBestScoreHard(){return bestScoreHard;}
 
-    public String getWordFromPos(int pos){return chosenWords[pos];}
-
+    /**
+     * Evaluates the words entered by the user as correct/incorrect
+     * @param str
+     * @param pos
+     */
     public void evaluate(String str, int pos){
         if(str.equals(chosenWords[pos])){
             score++;
@@ -133,10 +167,18 @@ public class SpellingGame {
         }
     }
 
+    /**
+     * Plays the given word out loud
+     * @param word
+     */
     public void speakWord(String word) {
         tts.speak(word, TextToSpeech.QUEUE_FLUSH, null);
     }
 
+    /**
+     * Plays a word based on the specific button pressed (1-15)
+     * @param v
+     */
     public void play(View v) {
         switch (v.getId()) {
             case R.id.megaphone1:
@@ -187,6 +229,12 @@ public class SpellingGame {
         }
     }
 
+    /**
+     * updates the view with the solution to the SpellingGame
+     * @param tv
+     * @param iv
+     * @param pos
+     */
     public void updateSolnView(TextView tv, ImageView iv, int pos){
         tv.setText(chosenWords[pos]);
         if(correct[pos] == 1)

@@ -9,10 +9,12 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class SpellingMainActivity extends AppCompatActivity {
-    public static int level;
-    private SpellingGame game;
+    private static SpellingGame game;
 
-
+    /**
+     * Activity is initialized
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,10 +22,12 @@ public class SpellingMainActivity extends AppCompatActivity {
         game = new SpellingGame(this);
         updateBestScores();
         getSupportActionBar().hide();
-        level = 0;
 
     }
 
+    /**
+     * Updates the best Easy, Medium, and Hard Scores with persistent data
+     */
     public void updateBestScores(){
         TextView tv1 = findViewById(R.id.easy_score);
         tv1.setText(game.getBestScoreEasy() + "/" + game.NUM_QUESTIONS);
@@ -36,28 +40,42 @@ public class SpellingMainActivity extends AppCompatActivity {
         Log.w("SMA","Best Score Hard: " + game.getBestScoreHard());
     }
 
+    /**
+     * Play SpellingGame on the Easy level
+     * @param v
+     */
     public void playEasy(View v){
         Log.w("CDA","Inside playEasy");
-        level = 1;
+        game.setLevel(1);
         Intent intent = new Intent(this, SpellingGameActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_from_left,0);
     }
 
+    /**
+     * Play SpellingGame on the Medium level
+     * @param v
+     */
     public void playMedium(View v){
-        level = 2;
         Log.w("CDA","Inside playMedium");
+        game.setLevel(2);
         Intent intent = new Intent(this, SpellingGameActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_from_left,0);
     }
 
+    /**
+     * Play SpellingGame on the Hard level
+     * @param v
+     */
     public void playHard(View v){
-        level = 3;
         Log.w("CDA","Inside playHard");
+        game.setLevel(3);
         Intent intent = new Intent(this, SpellingGameActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.slide_from_left,0);
     }
+
+    public static SpellingGame getGame(){return game;}
 
 }

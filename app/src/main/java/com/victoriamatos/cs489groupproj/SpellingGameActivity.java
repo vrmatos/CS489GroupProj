@@ -20,44 +20,28 @@ import java.util.Random;
 public class SpellingGameActivity extends AppCompatActivity {
     private static SpellingGame game;
 
+    /**
+     * Activity is initialized
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game_layout);
         getSupportActionBar().hide();
-        game = new SpellingGame(this);
-
-        try {
-            //decide set of words based on ChooseDiffActivity's level
-            AssetManager am = getApplicationContext().getAssets();
-            InputStream is;
-            switch(SpellingMainActivity.level){
-                case 2:
-                    game.setLevel(2);
-                    is = getApplicationContext().getAssets().open("medium.txt");
-                    break;
-                case 3:
-                    game.setLevel(3);
-                    is = getApplicationContext().getAssets().open("hard.txt");
-                    break;
-                default:
-                    game.setLevel(1);
-                    is = getApplicationContext().getAssets().open("easy.txt");
-            }
-            game.chooseWords(is);
-        } catch (Exception e) {
-            Log.w("GA","Error reading file, filename");
-        }
-
+        game = SpellingMainActivity.getGame();
+        game.chooseWords(this);
     }
 
-    public static SpellingGame getGame(){return game;}
-
+    /**
+     * Calculates the score for the current SpellingGame before showing solution
+     * @param v
+     */
     public void calculate(View v) {
         Log.w("GA","Inside calculate");
         for(int i = 1; i <= game.NUM_QUESTIONS; i++){
             int edit_id = this.getResources().getIdentifier("word" + i, "id", this.getPackageName());
-            EditText et = (EditText) findViewById(edit_id);
+            EditText et = findViewById(edit_id);
             game.evaluate(et.getText().toString(), (i-1));
         }
         Intent intent = new Intent(this, SpellingSolnActivity.class);
@@ -65,6 +49,10 @@ public class SpellingGameActivity extends AppCompatActivity {
         overridePendingTransition(R.anim.slide_up,0);
     }
 
+    /**
+     * Plays a word from the SpellingGame
+     * @param v
+     */
     public void playWord(View v){
         game.play(v);
     }
