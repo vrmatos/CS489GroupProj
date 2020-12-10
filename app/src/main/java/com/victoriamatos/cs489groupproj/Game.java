@@ -273,6 +273,7 @@ public class Game {
             ship.top -= shift;
             ship.bottom -= shift;
         }
+
     }
 
 
@@ -372,23 +373,23 @@ public class Game {
 
 
     public boolean hitShip(){
-        return ship.contains(ball.x,ball.y + ballRadius);
+        return ship.contains(ball.x,ball.y);
     }
 
     public boolean hitShip2(){
-        return ship.contains(ball2.x,ball2.y + ball2Radius);
+        return ship.contains(ball2.x,ball2.y);
     }
 
     public boolean hitShip3(){
-        return ship.contains(ball3.x,ball3.y + ball3Radius);
+        return ship.contains(ball3.x,ball3.y);
     }
 
     public boolean hitShip4(){
-        return ship.contains(ball4.x,ball4.y + ball4Radius);
+        return ship.contains(ball4.x,ball4.y);
     }
 
     public boolean hitShip5(){
-        return ship.contains(ball5.x,ball5.y + ball5Radius);
+        return ship.contains(ball5.x,ball5.y);
     }
 
 

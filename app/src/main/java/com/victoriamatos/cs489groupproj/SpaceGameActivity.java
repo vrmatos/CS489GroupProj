@@ -22,6 +22,7 @@ public class SpaceGameActivity extends AppCompatActivity {
     private SoundPool pool;
     private int soundId;
 
+
     /**
      * Activity is initialized
      * @param savedInstanceState
@@ -58,7 +59,7 @@ public class SpaceGameActivity extends AppCompatActivity {
         SoundPool.Builder builder = new SoundPool.Builder();
         builder.setMaxStreams(1);
         pool = builder.build();
-        soundId = pool.load(this,R.raw.explosion, 1);
+        soundId = pool.load(this,R.raw.explosion, 0);
     }
 
     /**
@@ -68,6 +69,8 @@ public class SpaceGameActivity extends AppCompatActivity {
         Log.w("GA", "Inside playHitSound");
         pool.play(soundId, 1.0f, 1.0f, 0, 0, 1.0f);
     }
+
+
 
     /**
      * Actions for when a touch event occurs
